@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Basic Page Needs =====================================-->
+	<meta charset="utf-8">
+
+	<!-- Mobile Specific Metas ================================-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Site Title- -->
+	<title> control panel </title>
+
+	<link rel="shortcut icon" href="images/official-logo.png" type="image/x-icon">
+
+
+
+	<!-- CSS
+   ==================================================== -->
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Fontawesome Link -->
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/fontawesome.min.css">
+
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owlcarousel.min.css">
+
+	<!-- Style -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Style -->
+
+	<!-- Responsive -->
+	<link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+	<!-- Section Start -->
+	<section class="smsSetup pt-3">
+		<!-- Container Start -->
+		<div class="container">
+			<!-- header Start -->
+			<div class="header">
+				<!-- Row Start -->
+				<div class="row">
+					<!-- Column Start -->
+					<div class="col-12">
+						<h4 class="hd-color hd-text"> SMS SETUP</h4>
+					</div>
+					<!-- Column End -->
+				</div>
+				<!-- Row end -->
+			</div>
+			<!-- header End -->
+			<div class="msg-area pb-3">
+				<div class="category-sub">
+					<!-- Row Start -->
+					<div class="row g-3">
+						<!-- Column Start -->
+						<div class="col-lg-6">
+							<div class="category-selection">
+								<span class="fw-bold">Category* </span>
+								<select id="CtgSelect" class="inputState">
+									<option class="cls" selected> Select One </option>
+									<option> Notice </option>
+									<option> Greetings </option>
+									<option> Marketing</option>
+									<option> Offer </option>
+									<option> Other </option>
+								</select>
+							</div>
+						</div>
+						<!-- Column End -->
+
+						<!-- Column Start -->
+						<div class="col-lg-6 col-12">
+							<div class="text-field ps-3">
+								<span class="fw-bold"> Subject* </span>
+								<div class="input-div">
+									<i class="fa-solid fa-bars"></i>
+									<input placeholder="Write Subject" class="input-text" type="text" name=""
+										id="subject">
+								</div>
+							</div>
+						</div>
+						<!-- Column End -->
+					</div>
+					<!-- Row End -->
+				</div>
+
+				<div class="msg-input mt-3">
+					<span id=charcount></span>
+					<div class="row">
+						<div class="col-12">
+							<div class="input-msg">
+								<div class="title pt-2 pb-2 text-center">
+									<P class="m-0"> MESSAGE* </P>
+								</div>
+								<textarea id="myInput" onkeyup="countChars(this)" class="textarea-message w-100"
+									placeholder="Write Message" name="" id="" cols="100" rows="7"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="message-counter mt-2">
+					<div class="row gutter-control">
+						<div class="col-lg-6 col-6 p-0">
+							<div class="title pt-2 pb-2 counter text-center">
+								<p class="m-0">Characters: <span id="charNum"> 0 </span> /441 </p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-6 p-0">
+							<div class="title pt-2 pb-2 text-center">
+								<P class="m-0"> MESSAGE: 1 </P>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="control-btn mt-4">
+					<div class="row">
+						<div class="col-4 offset-4">
+							<div class="main-btn d-flex justify-content-center">
+								<button id="clrbtn" class="clr-btn" type="reset"><i
+										class="fa-solid fa-arrows-rotate"></i>
+									Reset</button>
+								<button type="submit" class="submit-btn"> <i class="fa-solid fa-floppy-disk"></i>
+									Save</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- Container Start -->
+	</section>
+	<!-- Section End -->
+
+
+
+
+
+
+
+	<div class=" progress-wrap">
+		<!--Scrool to top Progress-->
+		<svg class="progress-circle " width="100%" height="100%" viewBox="-1 -1 102 102">
+			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+		</svg>
+	</div>
+	<!--Scrool to top Progress-->
+
+
+	<!-- javaScript Files
+	=============================================================================-->
+
+	<!-- initialize jQuery Library -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+
+	<!-- Bootstrap jQuery -->
+	<script src="js/bootstrap.bundle.min.js"></script>
+
+	<!-- Fontawesome JS -->
+	<script src="js/fontawesome.min.js"></script>
+
+	<!-- Owl Carousel -->
+	<script src="js/owl-carousel.2.3.0.min.js"></script>
+	<!-- slick -->
+
+	<!-- smooth scroling -->
+	<script src="js/smoothscroll.js"></script>
+
+
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

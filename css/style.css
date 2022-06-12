@@ -1,0 +1,314 @@
+/*
+	Template Name: Vinazine
+	Author: Themewinter
+	Author URI: https://themeforest.net/user/tripples
+	Description: vinazine
+  Version: 1.0
+
+=====================
+   table of content
+====================
+
+1.   Typography
+2.   Global Styles
+3.   Top Bar
+4.   header middle area
+5.   Header area
+6.   Slider
+7.   Content area
+8.   blog section
+9.   Footer
+10.  Sub Pages
+11.  News Single
+12.  Sidebar
+13.  Error page
+
+*/
+/*------- social Fonts-----*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+
+html {
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
+  -moz-scroll-behavior: inherit;
+  -ms-scroll-behavior: inherit;
+  -o-scroll-behavior: inherit;
+  /* overflow-x: hidden; */
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-attachment: scroll;
+  font-family: 'Open Sans', sans-serif;
+  background: var(--main-bg);
+}
+
+:root {
+  --main-bg: #F7F7F7;
+  --head-color: #000000;
+  --yellow: #f8ab37;
+  --green: #2ecc71;
+  --white: #ffffff;
+  --grey-light: #f2f7f9;
+  --grey: #d72924;
+  --black: #000;
+  --black-blue: #1f2029;
+  --black-blue-light: #353746;
+  --black-blue-light-2: #404255;
+  --black-blue-light-3: #4b4d64;
+  --black-light: #424455;
+  --primary-color: #0074CF;
+  --secondery-color: #e5e5e5;
+  --paragraph-color: #444;
+}
+
+/* Global styles */
+.hd-color {
+  color: var(--head-color);
+}
+
+.gutter-control {
+  --bs-gutter-x: 0;
+
+}
+
+/* Global styles */
+
+.hd-text {
+  background-color: #E2F2FC;
+  padding: 10px 20px;
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.hd-text::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 4px;
+  background-color: #009BDC;
+  left: 0;
+  top: 0;
+}
+
+.msg-area {
+  background-color: var(--white);
+  padding: 40px;
+  padding-top: 20px !important;
+}
+
+.category-selection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputState {
+  background-image: linear-gradient(45deg, transparent 50%, white 59%),
+    linear-gradient(135deg, white 50%, transparent 53%),
+    linear-gradient(to right, skyblue, skyblue);
+  background-position: calc(100% - 11px) calc(1em + -3px),
+    calc(100% - 6px) calc(1em + -3px),
+    100% 0;
+  background-size: 5px 5px,
+    5px 5px,
+    1.3em 2.5em;
+  background-repeat: no-repeat;
+  display: block;
+  width: 60%;
+  padding: 3px 4px;
+  font-size: 1rem;
+  position: relative;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  appearance: none;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.inputState:focus {
+  color: #212529;
+  background-color: #fff;
+  outline: 0;
+  box-shadow: none;
+}
+
+.text-field {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.input-div {
+  border: 1px solid #ddd;
+  width: 60%;
+}
+
+.fa-bars {
+  padding: 6px 7px;
+  position: relative;
+  opacity: .5;
+}
+
+.fa-bars::after {
+  position: absolute;
+  content: '';
+  height: 80%;
+  width: 1px;
+  background-color: #ddd;
+  top: 0;
+  right: 0;
+  margin: 2px 0;
+}
+
+.input-text {
+  border: none;
+  outline: 0;
+  width: 80%;
+}
+
+.input-msg {
+  background-color: #125D8A;
+}
+
+.title {
+  background-color: #033A58;
+  color: #fff;
+}
+
+.title.counter {
+  background-color: #FF3D27;
+}
+
+
+.textarea-message {
+  outline: 0;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  padding: 10px;
+}
+
+.control-btn button {
+  border: none;
+  border-radius: 4px;
+  padding: 6px 14px;
+  margin: 0 10px;
+  color: var(--white);
+}
+
+.control-btn .clr-btn {
+  background-color: #EF4844;
+}
+
+.control-btn .submit-btn {
+  background-color: #009ADC;
+}
+
+
+/* Top Scroll Progress */
+.progress-wrap {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  display: block;
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.2);
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.progress-wrap.active-progress {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  background: #f9f9f9;
+}
+
+.progress-wrap::after {
+  position: absolute;
+  font: var(--fa-font-solid);
+  content: '\f062';
+  text-align: center;
+  line-height: 46px;
+  font-size: 24px;
+  color: var(--grey);
+  left: 0;
+  top: 0;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  display: block;
+  z-index: 1;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.progress-wrap:hover::after {
+  opacity: 0;
+}
+
+.progress-wrap::before {
+  position: absolute;
+  font: var(--fa-font-solid);
+  content: '\f062';
+  text-align: center;
+  line-height: 46px;
+  font-size: 24px;
+  opacity: 0;
+  background-image: linear-gradient(298deg, var(--red), var(--yellow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  left: 0;
+  top: 0;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  display: block;
+  z-index: 2;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.progress-wrap:hover::before {
+  opacity: 1;
+}
+
+.progress-wrap svg path {
+  fill: none;
+}
+
+.progress-wrap svg.progress-circle path {
+  stroke: var(--grey);
+  stroke-width: 4;
+  box-sizing: border-box;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+body.light .progress-wrap {
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+body.light .progress-wrap::after {
+  color: var(--black-blue);
+}
+
+body.light .progress-wrap svg.progress-circle path {
+  stroke: var(--black-blue);
+}
+
+/* Top Scroll Progress */

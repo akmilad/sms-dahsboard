@@ -42,7 +42,7 @@
 
 </head>
 
-<body>
+<body onload="startTime()">
 	<!-- Section Start -->
 	<section class="smsSetup pt-3">
 		<!-- Container Start -->
@@ -146,12 +146,11 @@
 		</div>
 		<!-- Container Start -->
 	</section>
-
-
-
 	<!-- Section End -->
+
+
 	<!-- Section Start -->
-	<section class="smsSetup pt-3">
+	<section class="smsLis pt-3">
 		<!-- Container Start -->
 		<div class="container">
 			<!-- header Start -->
@@ -270,11 +269,717 @@
 	</section>
 	<!-- Section End -->
 
+	<!-- Section Start -->
+	<section class="smsModule pt-2 mt-4">
+		<!-- Container Start -->
+		<div class="container">
+			<div class="counter-box">
+				<div class="row g-2">
+					<div class="col-lg-3 col-md-3 col-6">
+						<div class="balance counter-block">
+							<p class="m-0 pt-2 ps-2 pb-1"> <i class="fa-solid fa-chart-column"></i> Balance</p>
+							<span class="ps-2"> 00 </span>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-6">
+						<div class="student counter-block">
+							<p class="m-0 pt-2 ps-2 pb-1"> <i class="fa-solid fa-user-graduate"></i></i> Student</p>
+							<span class="ps-2"> 65575 </span>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-6">
+						<div class="autoDate counter-block">
+							<p class="m-0 pt-2 ps-2 pb-1"> <i class="fa-solid fa-user-graduate"></i></i> Date</p>
+							<span class="date ps-2" id="currentDate"></span>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-6">
+						<div class="time counter-block">
+							<p class="m-0 pt-2 ps-2 pb-1"> <i class="fa-regular fa-clock"></i> Time </p>
+							<span class="date ps-2" id="currentTime"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- header Start -->
+			<div class="header mt-2">
+				<!-- Row Start -->
+				<div class="row">
+					<!-- Column Start -->
+					<div class="col-12">
+						<h4 class="hd-color hd-text"> SMS LIST</h4>
+					</div>
+					<!-- Column End -->
+				</div>
+				<!-- Row end -->
+			</div>
+			<!-- header End -->
+
+			<div class="msg-area smsModuleArea pb-2">
+
+				<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+
+					<li class="nav-item" role="presentation">
+						<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+							data-bs-target="#pills-Student" type="button" role="tab" aria-controls="pills-home"
+							aria-selected="true">STUDENT</button>
+					</li>
+
+
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+							data-bs-target="#pills-teacher" type="button" role="tab" aria-controls="pills-profile"
+							aria-selected="false">TEACHER</button>
+					</li>
+
+
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+							data-bs-target="#pills-staff" type="button" role="tab" aria-controls="pills-contact"
+							aria-selected="false">STAFF</button>
+					</li>
+
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-MC"
+							type="button" role="tab" aria-controls="pills-contact" aria-selected="false">MANAGING
+							COMMITTEE</button>
+					</li>
+
+				</ul>
+
+				<div class="tab-content table-bg" id="pills-tabContent">
+					<div class="tab-pane fade show active" id="pills-Student" role="tabpanel"
+						aria-labelledby="pills-home-tab">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Class* </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Session* </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Remission </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold">SMS Type </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Section* </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+
+										<div class="text-field mt-3">
+											<span class="fw-bold"> ID/ROLL </span>
+											<div class="input-div">
+												<i class="fa-solid fa-bars"></i>
+												<input class="input-text roll" type="text" name="" id="subject">
+											</div>
+										</div>
+
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> EXAM </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> Shift </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> Gender </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> Group </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> Religion </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+									</div>
+
+								</div>
+								<div class="category-selection mt-3">
+									<span class="fw-bold">Section* </span>
+									<select id="CtgSmS" class="inputState message">
+										<option class="cls" selected> Select One </option>
+										<option> Notice </option>
+										<option> Greetings </option>
+										<option> Marketing</option>
+										<option> Offer </option>
+										<option> Other </option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="tab-pane fade" id="pills-teacher" role="tabpanel" aria-labelledby="pills-profile-tab">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Class* </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Session* </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Remission </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold">SMS Type </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Section* </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+
+										<div class="text-field mt-3">
+											<span class="fw-bold"> ID/ROLL </span>
+											<div class="input-div">
+												<i class="fa-solid fa-bars"></i>
+												<input class="input-text roll" type="text" name="" id="subject">
+											</div>
+										</div>
+
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> EXAM </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> Shift </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> Gender </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> Group </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> Religion </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+									</div>
+
+								</div>
+								<div class="category-selection mt-3">
+									<span class="fw-bold">Section* </span>
+									<select id="CtgSmS" class="inputState message">
+										<option class="cls" selected> Select One </option>
+										<option> Notice </option>
+										<option> Greetings </option>
+										<option> Marketing</option>
+										<option> Offer </option>
+										<option> Other </option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="pills-staff" role="tabpanel" aria-labelledby="pills-contact-tab">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Class* </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Session* </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Remission </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold">SMS Type </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Section* </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+
+										<div class="text-field mt-3">
+											<span class="fw-bold"> ID/ROLL </span>
+											<div class="input-div">
+												<i class="fa-solid fa-bars"></i>
+												<input class="input-text roll" type="text" name="" id="subject">
+											</div>
+										</div>
+
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> EXAM </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> Shift </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> Gender </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> Group </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> Religion </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+									</div>
+
+								</div>
+								<div class="category-selection mt-3">
+									<span class="fw-bold">Section* </span>
+									<select id="CtgSmS" class="inputState message">
+										<option class="cls" selected> Select One </option>
+										<option> Notice </option>
+										<option> Greetings </option>
+										<option> Marketing</option>
+										<option> Offer </option>
+										<option> Other </option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="pills-MC" role="tabpanel" aria-labelledby="pills-contact-tab">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Class* </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Session* </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Remission </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold">SMS Type </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Section* </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+
+										<div class="text-field mt-3">
+											<span class="fw-bold"> ID/ROLL </span>
+											<div class="input-div">
+												<i class="fa-solid fa-bars"></i>
+												<input class="input-text roll" type="text" name="" id="subject">
+											</div>
+										</div>
+
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> EXAM </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> Shift </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> Gender </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> Group </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="category-selection mt-3">
+											<span class="fw-bold"> Religion </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+									</div>
+
+								</div>
+								<div class="category-selection mt-3">
+									<span class="fw-bold">Section* </span>
+									<select id="CtgSmS" class="inputState message">
+										<option class="cls" selected> Select One </option>
+										<option> Notice </option>
+										<option> Greetings </option>
+										<option> Marketing</option>
+										<option> Offer </option>
+										<option> Other </option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
 
 
+				<div class="control-btn mt-4">
+					<div class="row">
+						<div class="col-12 col-md-6 offset-md-3">
+							<div class="main-btn d-flex justify-content-center">
+								<button id="smsListReset" class="clr-btn" type="reset"><i
+										class="fa-solid fa-arrows-rotate"></i>
+									Reset</button>
+								<button type="submit" class="submit-btn"> <i class="fa-solid fa-floppy-disk"></i>
+									Save</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
 
+
+		</div>
+		<!-- Container Start -->
+	</section>
+	<!-- Section End -->
 
 	<div class=" progress-wrap">
 		<!--Scrool to top Progress-->

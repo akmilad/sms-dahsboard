@@ -273,6 +273,86 @@ body {
 
 /* SMS List Section */
 
+
+/* Send SMS Module  */
+.counter-block {
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.counter-block.balance {
+  background-color: #009ADC;
+}
+
+.counter-block.student {
+  background-color: #00BC9E;
+}
+
+.counter-block.autoDate {
+  background-color: #FF5F47;
+}
+
+.counter-block.time {
+  background-color: #FFA422;
+}
+
+.counter-block p {
+  /* margin: 0; */
+  /* padding: 8px; */
+  color: var(--white);
+  font-weight: 700;
+}
+
+.counter-block span {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+
+.nav-item {
+  width: 24%;
+}
+
+.nav-pills .nav-link {
+  background: var(--main-bg);
+  border: 0;
+  border-radius: 0;
+  width: 100%;
+  padding: 12px 0;
+
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  color: #FF5F47;
+  background-color: #ffffff;
+  border-bottom: 3px solid #FF5F47;
+}
+
+.input-text.roll {
+  width: 70%;
+}
+
+.inputState.message {
+  width: 80%;
+}
+
+.tab-content.table-bg {
+  padding: 10px;
+  background-color: #E2F2FC;
+}
+
+/* Send SMS Module  */
+
 /* Top Scroll Progress */
 .progress-wrap {
   position: fixed;
@@ -388,7 +468,7 @@ body.light .progress-wrap svg.progress-circle path {
 }
 
 .select-btn,
-li {
+.options li {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -459,11 +539,6 @@ li {
   border-radius: 5px;
   padding: 5px 20px 5px 19px;
   border: 1px solid #B3B3B3;
-}
-
-.search input:focus {
-  /* padding-left: 42px; */
-  /* border: 2px solid #4285f4; */
 }
 
 .search input::placeholder {

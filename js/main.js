@@ -23,11 +23,17 @@
 // }
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    // make it as accordion for smaller screens
+    if (window.innerWidth > 0) {
+        format = {
+            dateFormat: "d-m-Y",
+        }
+        flatpickr("input[type=datetime-local]", format);
+    }
+});
 // Date & Time Picker
-format = {
-    dateFormat: "d-m-Y",
-}
-flatpickr("input[type=datetime-local]", format);
+
 // Date & Time Picker
 
 

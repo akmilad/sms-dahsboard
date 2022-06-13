@@ -60,10 +60,12 @@ body {
   --black-blue-light-2: #404255;
   --black-blue-light-3: #4b4d64;
   --black-light: #424455;
-  --primary-color: #0074CF;
   --secondery-color: #e5e5e5;
   --paragraph-color: #444;
-  --dropdown-icon: rgb(135, 206, 235);
+  --primary-color: rgb(135, 206, 235);
+  --btn-color: #009ADC;
+
+
   /* Font Size */
   --Sinput-font: 16px;
 }
@@ -234,9 +236,12 @@ body {
 }
 
 .text-field.dT {
-  display: flex;
-  justify-content: space-between;
-  column-gap: 40px;
+  display: block;
+  justify-content: inherit;
+  /* column-gap: 40px; */
+  row-gap: 10px;
+  display: grid;
+  width: 100%;
 }
 
 .input-text.dT {
@@ -246,6 +251,27 @@ body {
   font-size: var(--Sinput-font);
 }
 
+.data-table-main {
+  background-color: var(--primary-color);
+}
+
+.tableHead {
+  background-color: #00BC9E;
+  color: var(--white);
+}
+
+.viewBtn {
+  background: var(--btn-color);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  /* margin: 0; */
+  padding: 3px 11px;
+  font-weight: 600;
+}
+
+/* SMS List Section */
 
 /* Top Scroll Progress */
 .progress-wrap {
@@ -387,7 +413,7 @@ li {
   position: absolute;
   right: 0;
   height: 100%;
-  background: var(--dropdown-icon);
+  background: var(--primary-color);
   color: #fff;
   padding: 9px 6px;
 }

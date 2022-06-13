@@ -24,7 +24,11 @@
 	<!-- Fontawesome Link -->
 	<link rel="stylesheet" href="css/all.min.css">
 	<link rel="stylesheet" href="css/fontawesome.min.css">
+	<!-- Fontawesome Link -->
 
+	<!-- Time & Date Picker -->
+	<link rel="stylesheet" href="date/flatpickr.min.css">
+	<!-- Time & Date Picker -->
 
 	<!-- Owl Carousel -->
 	<link rel="stylesheet" href="css/owlcarousel.min.css">
@@ -61,7 +65,7 @@
 					<!-- Row Start -->
 					<div class="row g-3">
 						<!-- Column Start -->
-						<div class="col-lg-6">
+						<div class="col-md-6 col-12">
 							<div class="category-selection">
 								<span class="fw-bold">Category* </span>
 								<select id="CtgSelect" class="inputState">
@@ -77,7 +81,7 @@
 						<!-- Column End -->
 
 						<!-- Column Start -->
-						<div class="col-lg-6 col-12">
+						<div class="col-md-6 col-12">
 							<div class="text-field ps-3">
 								<span class="fw-bold"> Subject* </span>
 								<div class="input-div">
@@ -101,7 +105,7 @@
 									<P class="m-0"> MESSAGE* </P>
 								</div>
 								<textarea id="myInput" onkeyup="countChars(this)" class="textarea-message w-100"
-									placeholder="Write Message" name="" id="" cols="100" rows="7"></textarea>
+									placeholder="Write Message" maxlength="20" name="" cols="100" rows="7"></textarea>
 							</div>
 						</div>
 					</div>
@@ -113,7 +117,7 @@
 					<div class="row gutter-control">
 						<div class="col-lg-6 col-6 p-0">
 							<div class="title pt-2 pb-2 counter text-center">
-								<p class="m-0">Characters: <span id="charNum"> 0 </span> /441 </p>
+								<p id="cnt" class="m-0">Characters: <span id="charNum"> 0 </span> /20</p>
 							</div>
 						</div>
 						<div class="col-lg-6 col-6 p-0">
@@ -126,7 +130,7 @@
 
 				<div class="control-btn mt-4">
 					<div class="row">
-						<div class="col-4 offset-4">
+						<div class="col-12 col-md-6 offset-md-3">
 							<div class="main-btn d-flex justify-content-center">
 								<button id="clrbtn" class="clr-btn" type="reset"><i
 										class="fa-solid fa-arrows-rotate"></i>
@@ -139,6 +143,139 @@
 				</div>
 
 			</div>
+		</div>
+		<!-- Container Start -->
+	</section>
+
+
+
+	<!-- Section End -->
+	<!-- Section Start -->
+	<section class="smsSetup pt-3">
+		<!-- Container Start -->
+		<div class="container">
+			<!-- header Start -->
+			<div class="header">
+				<!-- Row Start -->
+				<div class="row">
+					<!-- Column Start -->
+					<div class="col-12">
+						<h4 class="hd-color hd-text"> SMS LIST</h4>
+					</div>
+					<!-- Column End -->
+				</div>
+				<!-- Row end -->
+			</div>
+			<!-- header End -->
+			<div class="msg-area smsList pb-2">
+				<div class="category-sub smsList-CS">
+					<!-- Row Start -->
+					<div class="row g-3">
+						<!-- Column Start -->
+						<div class="col-md-6 col-12">
+							<div class="category-selection">
+								<span class="fw-bold">Message* </span>
+								<div class="wrapper">
+									<div class="select-btn">
+										<span id="messageSearch">Select One</span>
+										<i class="fa-solid fa-caret-down"></i>
+									</div>
+									<div class="content">
+										<div class="search">
+											<i class="uil uil-search"></i>
+											<input spellcheck="false" type="text" placeholder="Search">
+										</div>
+										<ul class="options"></ul>
+									</div>
+								</div>
+							</div>
+							<div class="category-selection mt-3">
+								<span class="fw-bold">Category* </span>
+								<select id="CtgSmS" class="inputState">
+									<option class="cls" selected> Select One </option>
+									<option> Notice </option>
+									<option> Greetings </option>
+									<option> Marketing</option>
+									<option> Offer </option>
+									<option> Other </option>
+								</select>
+							</div>
+						</div>
+						<!-- Column End -->
+
+						<!-- Column Start -->
+						<div class="col-md-6 col-12">
+							<div class="text-field dT ps-3">
+								<div class="date">
+									<span class="fw-bold"> Date </span>
+									<input placeholder="Click to Select Date" class="input-text dT me-3"
+										type="datetime-local" id="date">
+								</div>
+								<div class="to">
+									<span class="fw-bold"> To </span>
+									<input class="input-text dT" type="text" name="" id="to">
+
+								</div>
+
+							</div>
+						</div>
+						<!-- Column End -->
+					</div>
+					<!-- Row End -->
+				</div>
+
+				<div class="control-btn mt-4">
+					<div class="row">
+						<div class="col-12 col-md-6 offset-md-3">
+							<div class="main-btn d-flex justify-content-center">
+								<button id="smsListReset" class="clr-btn" type="reset"><i
+										class="fa-solid fa-arrows-rotate"></i>
+									Reset</button>
+								<button type="submit" class="submit-btn"> <i class="fa-solid fa-floppy-disk"></i>
+									Save</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="data-table">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">First</th>
+							<th scope="col">Last</th>
+							<th scope="col">Handle</th>
+							<th scope="col">Handle</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">1</th>
+							<td>Mark</td>
+							<td>Otto</td>
+							<td>@mdo</td>
+							<td>@mdo</td>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td>Jacob</td>
+							<td>Thornton</td>
+							<td>@fat</td>
+							<td>@fat</td>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<td colspan="2">Larry the Bird</td>
+							<td>@twitter</td>
+							<td>@twitter</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+
 		</div>
 		<!-- Container Start -->
 	</section>
@@ -170,6 +307,9 @@
 
 	<!-- Fontawesome JS -->
 	<script src="js/fontawesome.min.js"></script>
+
+	<!-- Time & Date Picker -->
+	<script src="date/flatpickr.js"></script>
 
 	<!-- Owl Carousel -->
 	<script src="js/owl-carousel.2.3.0.min.js"></script>

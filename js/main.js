@@ -1,44 +1,13 @@
-/*
-    Template Name: Vinazine
-    Author: Themewinter
-    Author URI: https://themeforest.net/user/tripples
-    Description: vinazine
-   Version: 1.0
+// JS Total File
 
-   ================================
-   table of content
-   =================================
-   1.   dropdown menu
-   2.   breking news slider
-   3.   featured post slider
-   4.   Most populer slider
-   5.   Gallery popup
-   6.   video popup
-   7.   video slider
-
-*/
-// function charcountupdate(str) {
-//     var lng = str.length;
-//     document.getElementById("charcount").innerHTML = lng + ' out of 10 characters';
-// }
+//JS FILE Index
+// 1. SMS SETUP         : 10-40
+// 1. SMS List          : 43-115    
+// 1. SMS Module        : 120-191
+// 1. SMS Report        : Pending
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    // make it as accordion for smaller screens
-    if (window.innerWidth > 0) {
-        format = {
-            dateFormat: "d-m-Y",
-        }
-        flatpickr("input[type=datetime-local]", format);
-    }
-});
-// Date & Time Picker
-
-// Date & Time Picker
-
-
-
-
+//SMS SETUP
 // Character Counter And Reset Button
 const textfield = document.getElementById("myInput");
 const clearBtn = document.getElementById("clrbtn");
@@ -68,28 +37,10 @@ clearBtn.onclick = () => {
     }
 }
 // Character Counter And Reset Button
+//SMS SETUP
 
 
-
-// Character Counter And Reset Button
-const clearSmsList = document.getElementById("smsListReset");
-// const dateReset = document.getElementById("date");
-var SmsListCtg = document.getElementById("CtgSmS");
-
-clearSmsList.onclick = () => {
-    document.getElementById("date").value = "";
-    document.getElementById("to").value = "";
-    document.getElementById("messageSearch").innerHTML = "Select One";
-    for (var i = 0; i < SmsListCtg.length; i++) {
-        if (SmsListCtg.options[i].selected) {
-            SmsListCtg.options[i].selected = false;
-        }
-    }
-
-}
-// Character Counter And Reset Button
-
-
+//SMS List
 // SMS Subject Title(Dropdonw With Text Search)
 const wrapper = document.querySelector(".wrapper"),
     selectBtn = wrapper.querySelector(".select-btn"),
@@ -136,10 +87,37 @@ selectBtn.addEventListener("click", () => wrapper.classList.toggle("active"));
 // SMS Subject Title(Dropdonw With Text Search)
 
 
+// Character Counter And Reset Button
+const clearSmsList = document.getElementById("smsListReset");
+// const dateReset = document.getElementById("date");
+var SmsListCtg = document.getElementById("CtgSmS");
+
+clearSmsList.onclick = () => {
+    document.getElementById("date").value = "";
+    document.getElementById("to").value = "";
+    document.getElementById("messageSearch").innerHTML = "Select One";
+    for (var i = 0; i < SmsListCtg.length; i++) {
+        if (SmsListCtg.options[i].selected) {
+            SmsListCtg.options[i].selected = false;
+        }
+    }
+
+}
+
+// Date & Time Picker
+format = {
+    dateFormat: "d-m-Y",
+}
+flatpickr("input[type=datetime-local]", format);
+// Date & Time Picker
+
+// Character Counter And Reset Button
+//SMS List
 
 
 
 
+// SMS Module
 // Time & Date Live 
 const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
@@ -177,4 +155,38 @@ function startTime() {
     /* Auto refreshing time every 1 second */
     setTimeout(function () { startTime() }, 1000);
 }
-// Time & Date Live 
+// Time & Date Live
+
+
+// Select Check Box & Counter
+var checkboxes = document.querySelectorAll('.checkbox');
+var count = 0;
+document.getElementById("check-all").onclick = function () {
+    count = 0;
+    for (var checkbox of checkboxes) {
+        checkbox.checked = this.checked;
+        if (checkbox.checked == true) {
+            count++;
+            document.getElementById("selectCount").innerHTML = count;
+        }
+        else {
+            count = 0;
+            document.getElementById("selectCount").innerHTML = count;
+
+        }
+    }
+}
+for (var i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].addEventListener('click', function () {
+        if (this.checked == true) {
+            count++;
+        }
+        else {
+            count--;
+        }
+        document.getElementById("selectCount").innerHTML = count;
+    })
+}
+// Select Check Box & Counter
+// SMS Module
+

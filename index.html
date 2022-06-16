@@ -12,7 +12,7 @@
 	<!-- Site Title- -->
 	<title> control panel </title>
 
-	<link rel="shortcut icon" href="images/official-logo.png" type="image/x-icon">
+	<!-- <link rel="shortcut icon" href="images/official-logo.png" type="image/x-icon"> -->
 
 
 
@@ -20,6 +20,7 @@
    ==================================================== -->
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css.map">
 
 	<!-- Fontawesome Link -->
 	<link rel="stylesheet" href="css/all.min.css">
@@ -230,8 +231,8 @@
 								<button id="smsListReset" class="clr-btn" type="reset"><i
 										class="fa-solid fa-arrows-rotate"></i>
 									Reset</button>
-								<button type="submit" class="submit-btn"> <i class="fa-solid fa-floppy-disk"></i>
-									Save</button>
+								<button type="submit" class="submit-btn"> <i class="fa-solid fa-magnifying-glass"></i>
+									Search</button>
 							</div>
 						</div>
 					</div>
@@ -276,25 +277,25 @@
 			<div class="counter-box">
 				<div class="row g-2">
 					<div class="col-lg-3 col-md-3 col-6">
-						<div class="balance counter-block">
+						<div class="block-1 counter-block">
 							<p class="m-0 pt-2 ps-2 pb-1"> <i class="fa-solid fa-chart-column"></i> Balance</p>
 							<span class="ps-2"> 00 </span>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-3 col-6">
-						<div class="student counter-block">
+						<div class="block-2 counter-block">
 							<p class="m-0 pt-2 ps-2 pb-1"> <i class="fa-solid fa-user-graduate"></i></i> Student</p>
 							<span class="ps-2"> 65575 </span>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-3 col-6">
-						<div class="autoDate counter-block">
+						<div class="block-3 counter-block">
 							<p class="m-0 pt-2 ps-2 pb-1"> <i class="fa-solid fa-user-graduate"></i></i> Date</p>
 							<span class="date ps-2" id="currentDate"></span>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-3 col-6">
-						<div class="time counter-block">
+						<div class="block-4 counter-block">
 							<p class="m-0 pt-2 ps-2 pb-1"> <i class="fa-regular fa-clock"></i> Time </p>
 							<span class="date ps-2" id="currentTime"></span>
 						</div>
@@ -308,7 +309,7 @@
 				<div class="row">
 					<!-- Column Start -->
 					<div class="col-12">
-						<h4 class="hd-color hd-text"> SMS LIST</h4>
+						<h4 class="hd-color hd-text"> Send SMS </h4>
 					</div>
 					<!-- Column End -->
 				</div>
@@ -352,9 +353,9 @@
 					<div class="tab-pane fade show active" id="pills-Student" role="tabpanel"
 						aria-labelledby="pills-home-tab">
 						<div class="row">
-							<div class="col-lg-6">
+							<div class="col-md-6">
 								<div class="row">
-									<div class="col-lg-6">
+									<div class="col-md-6">
 										<div class="category-selection mt-3">
 											<span class="fw-bold">Class* </span>
 											<select id="CtgSmS" class="inputState">
@@ -400,7 +401,7 @@
 											</select>
 										</div>
 									</div>
-									<div class="col-lg-6">
+									<div class="col-md-6">
 										<div class="category-selection mt-3">
 											<span class="fw-bold">Section* </span>
 											<select id="CtgSmS" class="inputState">
@@ -435,9 +436,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-6">
+							<div class="col-md-6">
 								<div class="row">
-									<div class="col-lg-6">
+									<div class="col-md-6">
 										<div class="category-selection mt-3">
 											<span class="fw-bold"> Shift </span>
 											<select id="CtgSmS" class="inputState">
@@ -461,7 +462,7 @@
 											</select>
 										</div>
 									</div>
-									<div class="col-lg-6">
+									<div class="col-md-6">
 										<div class="category-selection mt-3">
 											<span class="fw-bold"> Group </span>
 											<select id="CtgSmS" class="inputState">
@@ -504,9 +505,9 @@
 					</div>
 					<div class="tab-pane fade" id="pills-teacher" role="tabpanel" aria-labelledby="pills-profile-tab">
 						<div class="row">
-							<div class="col-lg-6">
+							<div class="col-md-6">
 								<div class="row">
-									<div class="col-lg-6">
+									<div class="col-md-6">
 										<div class="category-selection mt-3">
 											<span class="fw-bold">Class* </span>
 											<select id="CtgSmS" class="inputState">
@@ -552,7 +553,7 @@
 											</select>
 										</div>
 									</div>
-									<div class="col-lg-6">
+									<div class="col-md-6">
 										<div class="category-selection mt-3">
 											<span class="fw-bold">Section* </span>
 											<select id="CtgSmS" class="inputState">
@@ -587,9 +588,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-6">
+							<div class="col-md-6">
 								<div class="row">
-									<div class="col-lg-6">
+									<div class="col-md-6">
 										<div class="category-selection mt-3">
 											<span class="fw-bold"> Shift </span>
 											<select id="CtgSmS" class="inputState">
@@ -613,7 +614,7 @@
 											</select>
 										</div>
 									</div>
-									<div class="col-lg-6">
+									<div class="col-md-6">
 										<div class="category-selection mt-3">
 											<span class="fw-bold"> Group </span>
 											<select id="CtgSmS" class="inputState">
@@ -655,9 +656,9 @@
 					</div>
 					<div class="tab-pane fade" id="pills-staff" role="tabpanel" aria-labelledby="pills-contact-tab">
 						<div class="row">
-							<div class="col-lg-6">
+							<div class="col-md-6">
 								<div class="row">
-									<div class="col-lg-6">
+									<div class="col-md-6">
 										<div class="category-selection mt-3">
 											<span class="fw-bold">Class* </span>
 											<select id="CtgSmS" class="inputState">
@@ -703,7 +704,7 @@
 											</select>
 										</div>
 									</div>
-									<div class="col-lg-6">
+									<div class="col-md-6">
 										<div class="category-selection mt-3">
 											<span class="fw-bold">Section* </span>
 											<select id="CtgSmS" class="inputState">
@@ -738,9 +739,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-6">
+							<div class="col-md-6">
 								<div class="row">
-									<div class="col-lg-6">
+									<div class="col-md-6">
 										<div class="category-selection mt-3">
 											<span class="fw-bold"> Shift </span>
 											<select id="CtgSmS" class="inputState">
@@ -764,7 +765,7 @@
 											</select>
 										</div>
 									</div>
-									<div class="col-lg-6">
+									<div class="col-md-6">
 										<div class="category-selection mt-3">
 											<span class="fw-bold"> Group </span>
 											<select id="CtgSmS" class="inputState">
@@ -806,9 +807,9 @@
 					</div>
 					<div class="tab-pane fade" id="pills-MC" role="tabpanel" aria-labelledby="pills-contact-tab">
 						<div class="row">
-							<div class="col-lg-6">
+							<div class="col-md-6">
 								<div class="row">
-									<div class="col-lg-6">
+									<div class="col-md-6">
 										<div class="category-selection mt-3">
 											<span class="fw-bold">Class* </span>
 											<select id="CtgSmS" class="inputState">
@@ -854,7 +855,7 @@
 											</select>
 										</div>
 									</div>
-									<div class="col-lg-6">
+									<div class="col-md-6">
 										<div class="category-selection mt-3">
 											<span class="fw-bold">Section* </span>
 											<select id="CtgSmS" class="inputState">
@@ -889,9 +890,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-6">
+							<div class="col-md-6">
 								<div class="row">
-									<div class="col-lg-6">
+									<div class="col-md-6">
 										<div class="category-selection mt-3">
 											<span class="fw-bold"> Shift </span>
 											<select id="CtgSmS" class="inputState">
@@ -915,7 +916,7 @@
 											</select>
 										</div>
 									</div>
-									<div class="col-lg-6">
+									<div class="col-md-6">
 										<div class="category-selection mt-3">
 											<span class="fw-bold"> Group </span>
 											<select id="CtgSmS" class="inputState">
@@ -966,8 +967,8 @@
 								<button id="smsListReset" class="clr-btn" type="reset"><i
 										class="fa-solid fa-arrows-rotate"></i>
 									Reset</button>
-								<button type="submit" class="submit-btn"> <i class="fa-solid fa-floppy-disk"></i>
-									Save</button>
+								<button type="submit" class="submit-btn"> <i class="fa-solid fa-magnifying-glass"></i>
+									Search </button>
 							</div>
 						</div>
 					</div>
@@ -980,6 +981,490 @@
 		<!-- Container Start -->
 	</section>
 	<!-- Section End -->
+
+
+	<!-- Section Start -->
+	<section class="smsModule pt-2 mt-4">
+		<!-- Container Start -->
+		<div class="container">
+
+			<div class="customer-select  pb-2">
+				<div class="row gx-2">
+					<div class="col-md-8">
+						<div class="data-table">
+							<table class="table data-table-main table-checkbox table-striped">
+								<thead class="tableHead">
+									<tr>
+										<th scope="col">
+											<input type="checkbox" class="checkboxAll" name="" id="check-all"
+												onchange="checkAll(this)">
+
+										</th>
+										<th scope="col">ID</th>
+										<th scope="col">ROLL</th>
+										<th scope="col"> NAME</th>
+										<th scope="col"> CONTACT </th>
+									</tr>
+								</thead>
+								<tbody id="mainData">
+									<tr>
+										<th scope="row">
+											<input type="checkbox" class="checkbox" name="" id="check-customer">
+										</th>
+										<td> 89977 </td>
+										<td> 01 </td>
+										<td> MAHIRA AKTER MAHI </td>
+										<td> 01718784746 </td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<input type="checkbox" class="checkbox" name="" id="check-customer">
+										</th>
+										<td> 89977 </td>
+										<td> 01 </td>
+										<td> MAHIRA AKTER MAHI </td>
+										<td> 01718784746 </td>
+									</tr>
+									<tr>
+										<th scope="row"> <input type="checkbox" class="checkbox" name=""
+												id="check-customer"> </th>
+										<td> 89977 </td>
+										<td> 01 </td>
+										<td> MAHIRA AKTER MAHI </td>
+										<td> 01718784746 </td>
+									</tr>
+									<tr>
+										<th scope="row"> <input type="checkbox" class="checkbox" name=""
+												id="check-customer"> </th>
+										<td> 89977 </td>
+										<td> 01 </td>
+										<td> MAHIRA AKTER MAHI </td>
+										<td> 01718784746 </td>
+									</tr>
+									<tr>
+										<th scope="row"> <input type="checkbox" class="checkbox" name=""
+												id="check-customer"> </th>
+										<td> 89977 </td>
+										<td> 01 </td>
+										<td> MAHIRA AKTER MAHI </td>
+										<td> 01718784746 </td>
+									</tr>
+									<tr>
+										<th scope="row"> <input type="checkbox" class="checkbox" name=""
+												id="check-customer"> </th>
+										<td> 89977 </td>
+										<td> 01 </td>
+										<td> MAHIRA AKTER MAHI </td>
+										<td> 01718784746 </td>
+									</tr>
+									<tr>
+										<th scope="row"> <input type="checkbox" class="checkbox" name=""
+												id="check-customer"> </th>
+										<td> 89977 </td>
+										<td> 01 </td>
+										<td> MAHIRA AKTER MAHI </td>
+										<td> 01718784746 </td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<!-- Select-counter -->
+						<div class="Select-counter ">
+							<!-- Row Start -->
+
+							<!-- Column Start -->
+
+							<h4 class="hd-color table-row-conut text-center"> Selected Customer: <span id="selectCount">
+									0</span>
+							</h4>
+							<h4 class="hd-color table-row-conut text-center"> Total Customer: <span id="selectCount">
+									0</span>
+							</h4>
+
+							<!-- Column End -->
+
+							<!-- Row end -->
+						</div>
+						<!-- Select-counter -->
+
+						<div class="send-message mt-3">
+							<div class="message">
+								<p class="m-0"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
+									aspernatur
+									veritatis nesciunt eos deserunt ducimus ab illum consequuntur. Nihil, animi? </p>
+							</div>
+							<div class="send-m-btn mt-3">
+								<button type="button" id="send-massage-btn"> <i class="fa-solid fa-paper-plane"></i>
+									Send
+									Message!
+								</button>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+
+		</div>
+		<!-- Container Start -->
+	</section>
+	<!-- Section End -->
+
+	<!-- Section Start -->
+	<section class="smsModule pt-2 mt-4 mb-3">
+		<!-- Container Start -->
+		<div class="container">
+			<div class="counter-box">
+				<div class="row g-2">
+					<div class="col-lg-2 col-md-2 col-4">
+						<div class="block-1 counter-block">
+							<p class="m-0 pt-2 ps-2 pb-1"> <i class="fa-solid fa-chart-column"></i> Balance</p>
+							<span class="ps-2"> 00 </span>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-2 col-4">
+						<div class="block-2 counter-block">
+							<p class="m-0 pt-2 ps-2 pb-1"> <i class="fa-solid fa-user-graduate"></i></i> Student</p>
+							<span class="ps-2"> 65575 </span>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-2 col-4">
+						<div class="block-3 counter-block">
+							<p class="m-0 pt-2 ps-2 pb-1"> <i class="fa-solid fa-user-graduate"></i></i> Date</p>
+							<span class="ps-2"> 00 </span>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-2 col-4">
+						<div class="block-4 counter-block">
+							<p class="m-0 pt-2 ps-2 pb-1"> <i class="fa-regular fa-clock"></i> Time </p>
+							<span class="ps-2"> 00 </span>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-2 col-4">
+						<div class="block-5 counter-block">
+							<p class="m-0 pt-2 ps-2 pb-1"> <i class="fa-regular fa-clock"></i> Time </p>
+							<span class="ps-2"> 00 </span>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-2 col-4">
+						<div class="block-6 counter-block">
+							<p class="m-0 pt-2 ps-2 pb-1"> <i class="fa-regular fa-clock"></i> Time </p>
+							<span class="ps-2"> 00 </span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- header Start -->
+			<div class="header mt-2">
+				<!-- Row Start -->
+				<div class="row">
+					<!-- Column Start -->
+					<div class="col-12">
+						<h4 class="hd-color hd-text"> SMS Report </h4>
+					</div>
+					<!-- Column End -->
+				</div>
+				<!-- Row end -->
+			</div>
+			<!-- header End -->
+
+			<div class="msg-area smsReportArea pb-2">
+
+				<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+
+					<li class="nav-item" role="presentation">
+						<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+							data-bs-target="#pills-Setup" type="button" role="tab" aria-controls="pills-home"
+							aria-selected="true">STUDENT</button>
+					</li>
+
+
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+							data-bs-target="#pills-List" type="button" role="tab" aria-controls="pills-profile"
+							aria-selected="false">TEACHER</button>
+					</li>
+
+
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+							data-bs-target="#pills-Send" type="button" role="tab" aria-controls="pills-contact"
+							aria-selected="false">STAFF</button>
+					</li>
+
+				</ul>
+
+				<div class="tab-content table-bg" id="pills-tabContent">
+					<div class="tab-pane fade show active" id="pills-Setup" role="tabpanel"
+						aria-labelledby="pills-home-tab">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Class* </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="date mt-3">
+											<span class="fw-bold"> Date </span>
+											<input placeholder="Click to Select Date" class="input-text dT "
+												type="datetime-local" id="date">
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Section* </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+
+										<div class="to mt-3">
+											<span class="fw-bold"> To </span>
+											<input class="input-text dT" type="text" name="" id="to">
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="category-selection mt-3">
+									<span class="fw-bold">Section* </span>
+									<select id="CtgSmS" class="inputState message">
+										<option class="cls" selected> Select One </option>
+										<option> Notice </option>
+										<option> Greetings </option>
+										<option> Marketing</option>
+										<option> Offer </option>
+										<option> Other </option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="tab-pane fade" id="pills-List" role="tabpanel" aria-labelledby="pills-profile-tab">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Class* </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="date mt-3">
+											<span class="fw-bold"> Date </span>
+											<input placeholder="Click to Select Date" class="input-text dT "
+												type="datetime-local" id="date">
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Section* </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+
+										<div class="to mt-3">
+											<span class="fw-bold"> To </span>
+											<input class="input-text dT" type="text" name="" id="to">
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="category-selection mt-3">
+									<span class="fw-bold">Section* </span>
+									<select id="CtgSmS" class="inputState message">
+										<option class="cls" selected> Select One </option>
+										<option> Notice </option>
+										<option> Greetings </option>
+										<option> Marketing</option>
+										<option> Offer </option>
+										<option> Other </option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="pills-Send" role="tabpanel" aria-labelledby="pills-contact-tab">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="row">
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Class* </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+										<div class="date mt-3">
+											<span class="fw-bold"> Date </span>
+											<input placeholder="Click to Select Date" class="input-text dT "
+												type="datetime-local" id="date">
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="category-selection mt-3">
+											<span class="fw-bold">Section* </span>
+											<select id="CtgSmS" class="inputState">
+												<option class="cls" selected> Select One </option>
+												<option> Notice </option>
+												<option> Greetings </option>
+												<option> Marketing</option>
+												<option> Offer </option>
+												<option> Other </option>
+											</select>
+										</div>
+
+										<div class="to mt-3">
+											<span class="fw-bold"> To </span>
+											<input class="input-text dT" type="text" name="" id="to">
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="category-selection mt-3">
+									<span class="fw-bold">Section* </span>
+									<select id="CtgSmS" class="inputState message">
+										<option class="cls" selected> Select One </option>
+										<option> Notice </option>
+										<option> Greetings </option>
+										<option> Marketing</option>
+										<option> Offer </option>
+										<option> Other </option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+
+				<div class="control-btn mt-4">
+					<div class="row">
+						<div class="col-12 col-md-6 offset-md-3">
+							<div class="main-btn d-flex justify-content-center">
+								<button id="smsListReset" class="clr-btn" type="reset"><i
+										class="fa-solid fa-arrows-rotate"></i>
+									Reset</button>
+								<button type="submit" class="submit-btn"> <i class="fa-solid fa-magnifying-glass"></i>
+									Search </button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="counter-box mt-4">
+					<div class="row g-2">
+						<div class="col-lg-2 col-md-2 col-4">
+							<div class="range-1 d-flex range counter-block">
+								<div class="icon icon-1"> <i class="fa-regular fa-clock"></i></div>
+								<div class="range-title">
+									<p class="m-0 pt-2 ps-2 pb-1"> Time </p>
+									<span class="ps-2"> 00 </span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-4">
+							<div class="range-2 d-flex range counter-block">
+								<div class="icon icon-2"> <i class="fa-solid fa-triangle-exclamation"></i></div>
+								<div class="range-title">
+									<p class="m-0 pt-2 ps-2 pb-1"> Time </p>
+									<span class="ps-2"> 00 </span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-4">
+							<div class="range-3 d-flex range counter-block">
+								<div class="icon icon-3"> <i class="fa-regular fa-clock"></i></div>
+								<div class="range-title">
+									<p class="m-0 pt-2 ps-2 pb-1"> Time </p>
+									<span class="ps-2"> 00 </span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-4">
+							<div class="range-4 d-flex range counter-block">
+								<div class="icon icon-4"> <i class="fa-regular fa-clock"></i></div>
+								<div class="range-title">
+									<p class="m-0 pt-2 ps-2 pb-1"> Time </p>
+									<span class="ps-2"> 00 </span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-4">
+							<div class="range-5 d-flex range counter-block">
+								<div class="icon icon-5"> <i class="fa-regular fa-clock"></i></div>
+								<div class="range-title">
+									<p class="m-0 pt-2 ps-2 pb-1"> Time </p>
+									<span class="ps-2"> 00 </span>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-4">
+							<div class="range-6 d-flex range counter-block">
+								<div class="icon icon-6"> <i class="fa-regular fa-clock"></i></div>
+								<div class="range-title">
+									<p class="m-0 pt-2 ps-2 pb-1"> Time </p>
+									<span class="ps-2"> 00 </span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Container Start -->
+	</section>
+	<!-- Section End -->
+
+
 
 	<div class=" progress-wrap">
 		<!--Scrool to top Progress-->
@@ -998,6 +1483,7 @@
 
 	<!-- Bootstrap jQuery -->
 	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js.map"></script>
 
 	<!-- Fontawesome JS -->
 	<script src="js/fontawesome.min.js"></script>

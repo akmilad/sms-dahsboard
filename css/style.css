@@ -1,29 +1,3 @@
-/*
-	Template Name: Vinazine
-	Author: Themewinter
-	Author URI: https://themeforest.net/user/tripples
-	Description: vinazine
-  Version: 1.0
-
-=====================
-   table of content
-====================
-
-1.   Typography
-2.   Global Styles
-3.   Top Bar
-4.   header middle area
-5.   Header area
-6.   Slider
-7.   Content area
-8.   blog section
-9.   Footer
-10.  Sub Pages
-11.  News Single
-12.  Sidebar
-13.  Error page
-
-*/
 /*------- social Fonts-----*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
@@ -80,8 +54,6 @@ body {
 
 }
 
-/* Global styles */
-
 .hd-text {
   background-color: #E2F2FC;
   padding: 10px 20px;
@@ -136,6 +108,8 @@ body {
   border-radius: .25rem;
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
+
+/* Global styles */
 
 .inputState:focus {
   color: #212529;
@@ -258,6 +232,7 @@ body {
 .tableHead {
   background-color: #00BC9E;
   color: var(--white);
+  border-bottom: 2px solid #00BC9E;
 }
 
 .viewBtn {
@@ -280,20 +255,28 @@ body {
   padding: 8px;
 }
 
-.counter-block.balance {
+.counter-block.block-1 {
   background-color: #009ADC;
 }
 
-.counter-block.student {
+.counter-block.block-2 {
   background-color: #00BC9E;
 }
 
-.counter-block.autoDate {
+.counter-block.block-3 {
   background-color: #FF5F47;
 }
 
-.counter-block.time {
+.counter-block.block-4 {
   background-color: #FFA422;
+}
+
+.counter-block.block-5 {
+  background-color: #009ADC;
+}
+
+.counter-block.block-6 {
+  background-color: #00BC9E;
 }
 
 .counter-block p {
@@ -352,6 +335,137 @@ body {
 }
 
 /* Send SMS Module  */
+
+/* Send SMS With Selection */
+.table-row-conut {
+  background-color: #009ADC;
+  padding: 10px 20px;
+  position: relative;
+  font-size: 16px;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.table-checkbox {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.table-checkbox>tbody>tr:nth-of-type(odd)>* {
+  background-color: #c7e9ff;
+}
+
+.Select-counter {
+  border-bottom: 3px solid #009ADC;
+  display: flex;
+  justify-content: space-between;
+  background: #009ADC;
+}
+
+.Select-counter .table-row-conut {
+  padding: 11px 0px;
+  position: relative;
+  font-size: 14px;
+  color: var(--white);
+  font-weight: 700;
+  margin: 0;
+  width: 50%;
+  text-align: left;
+}
+
+.send-message .message p {
+  padding: 7px;
+  background: #FF5F47;
+  border-radius: 5px;
+  color: var(--white);
+}
+
+.send-message .send-m-btn {
+  text-align: center;
+
+}
+
+.send-message .send-m-btn button {
+  background: #009ADC;
+  color: var(--white);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50px;
+}
+
+/* Send SMS With Selection */
+
+/* SMS Report Area */
+.smsReportArea .nav-item {
+  width: 32%;
+}
+
+.smsReportArea .nav-pills .nav-link {
+  background: #009ADC;
+  color: var(--white);
+}
+
+.smsReportArea .nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  background-color: #FF5F47;
+  border-bottom: 3px solid #009ADC;
+}
+
+.counter-block.range {
+  align-items: center;
+  border: 1px solid #000;
+  box-shadow: 1px 2px 6px #999;
+}
+
+.counter-block.range .icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter-block.range i {
+
+  font-size: 20px;
+  color: var(--white);
+}
+
+.counter-block.range .icon-1 {
+  background-color: #009ADC;
+}
+
+.counter-block.range .icon-2 {
+  background-color: #00BC9E;
+}
+
+.counter-block.range .icon-3 {
+  background-color: #FF5F47;
+}
+
+.counter-block.range .icon-4 {
+  background-color: #FFA422;
+}
+
+.counter-block.range .icon-5 {
+  background-color: #009ADC;
+}
+
+.counter-block.range .icon-6 {
+  background-color: #00BC9E;
+}
+
+
+.counter-block.range .range-title {
+  padding-left: 10px;
+}
+
+.counter-block.range .range-title p,
+.counter-block.range .range-title span {
+  color: var(--black);
+}
+
+/* SMS Report Area */
 
 /* Top Scroll Progress */
 .progress-wrap {
